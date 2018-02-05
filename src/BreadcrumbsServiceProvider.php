@@ -4,7 +4,6 @@ namespace Apertus\Laravel\Breadcrumbs;
 
 use Illuminate\Support\ServiceProvider;
 
-
 class BreadcrumbsServiceProvider extends ServiceProvider
 {
     /**
@@ -14,7 +13,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(Breadcrumbs::class, function () {
+        $this->app->singleton('Breadcrumbs', function () {
             return new Breadcrumbs();
         });
     }

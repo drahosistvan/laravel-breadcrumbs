@@ -4,11 +4,6 @@ namespace Apertus\Laravel\Breadcrumbs\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * Breadcrumbs facade - allows easy access to the Manager instance.
- *
- * @see BreadcrumbsManager
- */
 class Breadcrumbs extends Facade
 {
     /**
@@ -18,6 +13,6 @@ class Breadcrumbs extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Breadcrumbs';
+        return static::$app['Breadcrumbs'];
     }
 }

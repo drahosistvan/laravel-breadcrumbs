@@ -10,6 +10,8 @@ class Breadcrumbs extends Collection
     public function __construct()
     {
         $this->add('Kezdőlap', url('/'));
+
+        return $this;
     }
 
     public function push($item)
