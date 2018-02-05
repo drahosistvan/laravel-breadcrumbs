@@ -3,6 +3,7 @@
 namespace Apertus\Laravel\Breadcrumbs;
 
 use Illuminate\Support\ServiceProvider;
+use View;
 
 class BreadcrumbsServiceProvider extends ServiceProvider
 {
@@ -16,5 +17,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider
         $this->app->singleton('Breadcrumbs', function () {
             return new Breadcrumbs();
         });
+
+        View::share('breadcrumbs', $this->app['Breadcrumbs']);
     }
 }
