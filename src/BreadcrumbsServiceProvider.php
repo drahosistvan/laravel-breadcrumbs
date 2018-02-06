@@ -19,9 +19,9 @@ class BreadcrumbsServiceProvider extends ServiceProvider
         });
 
         $this->publishes([
-            __DIR__ . '/../config/breadcrumbs.php' => config_path('courier.php'),
+            __DIR__ . '/../config/breadcrumbs.php' => config_path('breadcrumbs.php'),
         ]);
-        
+
         View::share('breadcrumbs', $this->app['Breadcrumbs']);
     }
 }
