@@ -8,6 +8,6 @@ class BreadcrumbItem
 
     public function __construct($title, $url) {
         $this->title = $title;
-        $this->url = $url;
+        $this->url = url($url);
     }
 }
