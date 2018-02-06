@@ -28,21 +28,21 @@
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "Apertus\\Laravel\\Breadcrumbs\\": "src/"
+      "Isti\\Laravel\\Breadcrumbs\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "BreadcrumbsTests\\": "tests/"
+      "Isti\\Laravel\\Breadcrumbs\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Apertus\\Laravel\\Breadcrumbs\\BreadcrumbsServiceProvider"
+        "Isti\\Laravel\\Breadcrumbs\\BreadcrumbsServiceProvider"
       ],
       "aliases": {
-        "Breadcrumbs": "Apertus\\Laravel\\Breadcrumbs\\Facades\\Breadcrumbs"
+        "Breadcrumbs": "Isti\\Laravel\\Breadcrumbs\\Facades\\Breadcrumbs"
       }
     }
   }

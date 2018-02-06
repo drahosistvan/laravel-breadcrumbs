@@ -1,6 +1,6 @@
 <?php
 
-namespace Apertus\Laravel\Breadcrumbs;
+namespace Isti\Laravel\Breadcrumbs;
 
 use Illuminate\Support\ServiceProvider;
 use View;

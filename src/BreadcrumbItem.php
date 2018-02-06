@@ -1,5 +1,5 @@
 <?php
-namespace Apertus\Laravel\Breadcrumbs;
+namespace Isti\Laravel\Breadcrumbs;
 
 class BreadcrumbItem
 {

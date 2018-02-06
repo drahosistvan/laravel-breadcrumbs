@@ -1,19 +1,19 @@
 <?php
 
-namespace NkeHr\Services\Breadcrumbs;
+namespace Isti\Laravel\Breadcrumbs;
 
+use Isti\Laravel\Breadcrumbs\Exceptions\InvalidBreadcrumbItemException;
 use IteratorAggregate;
 use ArrayIterator;
 use Countable;
-use Illuminate\Contracts\Support\Arrayable;
 
-class Breadcrumbs implements IteratorAggregate, Countable, Arrayable
+class Breadcrumbs implements IteratorAggregate, Countable
 {
     protected $items = [];
 
     public function __construct()
     {
-        $this->add('Kezdőlap', url('/'));
+        $this->add('Kezdőlap', '/');
     }
 
     public function push($item)
@@ -43,7 +43,7 @@ class Breadcrumbs implements IteratorAggregate, Countable, Arrayable
     protected function arrayPush($item)
     {
         if (!is_a($item, BreadcrumbItem::class)) {
-            throw new \Exception('You can push only BreadcrumbItems to Breadcrumbs collection');
+            throw new InvalidBreadcrumbItemException('You can push only BreadcrumbItems to Breadcrumbs collection');
         }
         $this->items[] = $item;
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Apertus\Laravel\Breadcrumbs\Facades;
+namespace Isti\Laravel\Breadcrumbs\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
