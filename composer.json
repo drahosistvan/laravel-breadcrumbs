@@ -33,7 +33,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Isti\\Laravel\\Breadcrumbs\\Tests\\": "tests/"
+      "BreadcrumbsTests\\": "tests/"
     }
   },
   "extra": {

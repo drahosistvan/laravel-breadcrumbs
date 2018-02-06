@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit backupGlobals="false"
-         backupStaticAttributes="false"
-         bootstrap="vendor/autoload.php"
-         colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         processIsolation="false"
-         stopOnFailure="false">
-    <testsuites>
-        <testsuite name="Feature">
-            <directory suffix="Test.php">./tests/Integration</directory>
-        </testsuite>
+<phpunit
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        beStrictAboutOutputDuringTests="true"
+        beStrictAboutTestsThatDoNotTestAnything="true"
+        bootstrap="vendor/autoload.php"
+        beStrictAboutCoversAnnotation="true"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        processIsolation="false"
+        stopOnFailure="false"
+        syntaxCheck="false"
+        verbose="true"
+>
 
-        <testsuite name="Unit">
-            <directory suffix="Test.php">./tests/Unit</directory>
+    <!-- List of files with tests inside -->
+    <testsuites>
+        <testsuite name="Package Test Suite">
+            <directory suffix="Test.php">tests/</directory>
         </testsuite>
     </testsuites>
+
+    <!-- List of source files for code coverage checker -->
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">src/</directory>
         </whitelist>
     </filter>
+
 </phpunit>

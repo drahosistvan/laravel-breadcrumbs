@@ -1,16 +1,17 @@
 <?php
-namespace Isti\Laravel\Breadcrumbs\Test\Unit;
+namespace BreadcrumbsTests\Unit;
 
+use BreadcrumbsTests\TestCase;
 use Isti\Laravel\Breadcrumbs\Breadcrumbs;
 use Isti\Laravel\Breadcrumbs\Exceptions\InvalidBreadcrumbItemException;
-use PHPUnit\Framework\TestCase;
 
-class LanguageApiTest extends TestCase
+class BreadcrumbsTest extends TestCase
 {
     private $breadcrumbs;
 
     public function setUp()
     {
+        parent::setUp();
         $this->breadcrumbs = new Breadcrumbs();
     }
 

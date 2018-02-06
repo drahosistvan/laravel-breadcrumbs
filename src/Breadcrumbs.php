@@ -2,18 +2,20 @@
 
 namespace Isti\Laravel\Breadcrumbs;
 
+use Config;
+use Illuminate\Contracts\Support\Arrayable;
 use Isti\Laravel\Breadcrumbs\Exceptions\InvalidBreadcrumbItemException;
 use IteratorAggregate;
 use ArrayIterator;
 use Countable;
 
-class Breadcrumbs implements IteratorAggregate, Countable
+class Breadcrumbs implements IteratorAggregate, Countable, Arrayable
 {
     protected $items = [];
 
     public function __construct()
     {
-        $this->add('Kezdőlap', '/');
+        $this->add(Config::get('breadcrumbs.home.title'), Config::get('breadcrumbs.home.url'));
     }
 
     public function push($item)
