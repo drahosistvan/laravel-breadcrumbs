@@ -15,11 +15,11 @@
   "license": "MIT License",
   "require": {
     "php": ">=7.0.0",
-    "illuminate/support": "5.5.*",
-    "illuminate/view": "5.5.*"
+    "illuminate/support": ">=5.5",
+    "illuminate/view": ">=5.5"
   },
   "require-dev": {
-    "laravel/framework": "5.5.*",
+    "laravel/framework": ">=5.5",
     "orchestra/testbench": "3.5.*",
     "phpunit/phpunit": "6.*",
     "php-coveralls/php-coveralls": "^1.0"
