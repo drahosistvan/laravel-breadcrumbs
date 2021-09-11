@@ -2,7 +2,6 @@
 
 return [
     'home' => [
-        'title' => 'Home',
         'url' => '/',
     ]
 ];

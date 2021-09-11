@@ -15,7 +15,7 @@ class Breadcrumbs implements IteratorAggregate, Countable, Arrayable
 
     public function __construct()
     {
-        $this->add(trans('breadcrumbs::'.Config::get('breadcrumbs.home.title')), Config::get('breadcrumbs.home.url'));
+        $this->add(__('laravel-breadcrumbs::breadcrumbs.home_title'), Config::get('breadcrumbs.home.url'));
     }
 
     public function push($item)
