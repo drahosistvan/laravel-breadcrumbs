@@ -8,21 +8,20 @@
   "authors": [
     {
       "name": "Istvan Drahos",
-      "email": "drahos.istvan@apertus.uni-nke.hu",
+      "email": "drahos.istvan@gmail.com",
       "homepage": "https://isti.hu"
     }
   ],
   "license": "MIT",
   "require": {
-    "php": ">=7.0.0",
-    "illuminate/support": ">=5.5",
-    "illuminate/view": ">=5.5"
+    "php": "^7.2.5|^8.0",
+    "illuminate/support": ">=6.0",
+    "illuminate/view": ">=6.0"
   },
   "require-dev": {
-    "laravel/framework": ">=5.5",
-    "orchestra/testbench": "3.5.*",
-    "phpunit/phpunit": "6.*",
-    "php-coveralls/php-coveralls": "^1.0"
+    "laravel/framework": ">=6.0",
+    "orchestra/testbench": ">=4.0",
+    "phpunit/phpunit": "^7.5.15|^8.4|^9.3.3"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
