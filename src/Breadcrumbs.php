@@ -16,7 +16,7 @@ class Breadcrumbs implements IteratorAggregate, Countable, Arrayable
     public function push($item)
     {
         if (empty($this->items)) {
-            $this->add(__('laravel-breadcrumbs::breadcrumbs.home_title'), Config::get('breadcrumbs.home.url'));
+            $this->initTitle();
         }
         $this->arrayPush($item);
 
@@ -37,6 +37,7 @@ class Breadcrumbs implements IteratorAggregate, Countable, Arrayable
 
     public function last()
     {
+        $this->initTitle();
         return end($this->items);
     }
 
@@ -56,5 +57,11 @@ class Breadcrumbs implements IteratorAggregate, Countable, Arrayable
     public function toArray()
     {
         return $this->items;
+    }
+
+    protected function initTitle() {
+        if (empty($this->items)) {
+            $this->items[] = new BreadcrumbItem(__('laravel-breadcrumbs::breadcrumbs.home_title'), Config::get('breadcrumbs.home.url'));
+        }
     }
 }

@@ -14,7 +14,11 @@ class BreadcrumbsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'breadcrumbs');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-breadcrumbs');
+
+        $this->publishes([
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-breadcrumbs'),
+        ]);
     }
 
     /**
