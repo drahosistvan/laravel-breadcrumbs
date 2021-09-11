@@ -13,13 +13,11 @@ class Breadcrumbs implements IteratorAggregate, Countable, Arrayable
 {
     protected $items = [];
 
-    public function __construct()
-    {
-        $this->add(__('laravel-breadcrumbs::breadcrumbs.home_title'), Config::get('breadcrumbs.home.url'));
-    }
-
     public function push($item)
     {
+        if (empty($this->items)) {
+            $this->add(__('laravel-breadcrumbs::breadcrumbs.home_title'), Config::get('breadcrumbs.home.url'));
+        }
         $this->arrayPush($item);
 
         return $this;
